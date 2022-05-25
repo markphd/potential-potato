@@ -1,5 +1,6 @@
 :root {
   --panel-size: 450px;
+  --padding-menu-item: 10px 0;
   --transition: transform 300ms ease-in-out;
   --ne-body-font-size: 1rem;
   --ne-headings-scale: 1.125;
@@ -12,6 +13,12 @@
     --panel-size: 550px;
     --ne-body-font-size: 0.8rem;
     --ne-headings-scale: 1.2;
+  }
+}
+
+@media (width >= 100em) {
+  :root {
+    --padding-menu-item: 35px 0;
   }
 }
 
@@ -94,7 +101,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 30px 0;
+  padding: var(--padding-menu-item);
   position: relative;
 }
 
