@@ -76,6 +76,9 @@ main {
   right: 0;
 }
 
+.menu-item-text {
+  max-width: 18ch;
+}
 
 .menu-text-title {
   color: var(--dark-100);
@@ -91,7 +94,17 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 35px 0;
+  padding: 30px 0;
+  position: relative;
+}
+
+.menu-item::after {
+  content: '';
+  right: 0;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: url('./assets/Right Arrow.svg') no-repeat;
 }
 
 .menu-item-icon {
