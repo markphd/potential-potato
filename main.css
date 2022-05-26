@@ -48,7 +48,7 @@ main {
   position: fixed;
   right: 0;
   top: 0;
-  background-color: #3ad;
+  background-color: #fff;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
