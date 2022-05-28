@@ -1,12 +1,12 @@
 :root {
   --panel-size: 450px;
   --padding-menu-item: 10px 0;
-  --transition: transform 300ms cubic-bezier(0.86,0,0.07,1);
+  --transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
   --body-font-size: 1rem;
   --headings-scale: 1.125;
   --border-light-grey: #ededed;
   --button-blue: #0078c8;
-  --dark-100: rgba(60, 60, 60, 1); 
+  --dark-100: rgba(60, 60, 60, 1);
   --dark-70: rgba(60, 60, 60, 0.7);
 }
 
@@ -26,6 +26,51 @@
   }
 }
 
+h1 {
+  font-size: 61px;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+.large {
+  font-size: 18px;
+}
+
+.default {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: unset;
+}
+
+.small {
+  font-size: 14px;
+}
+
+caption {
+  font-size: 12px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,10 +88,11 @@ body {
 nav {
   position: fixed;
   display: flex;
-flex-direction: row;
-width: 100%;
-justify-content: flex-start;
-align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
 }
 
 main {
@@ -132,16 +178,16 @@ main {
 }
 
 .menu-item::after {
-  content: '';
+  content: "";
   right: 0;
   position: absolute;
   height: 20px;
   width: 20px;
-  background: url('./assets/Right Arrow.svg') no-repeat;
+  background: url("./assets/Right Arrow.svg") no-repeat;
 }
 
 .menu-item-icon {
-  margin-right: 20px;  
+  margin-right: 20px;
 }
 
 .menu-item:not(:last-child) {
@@ -149,13 +195,12 @@ main {
 }
 
 .logo {
-  background-image: url('./assets/logo.svg');
+  background-image: url("./assets/logo.svg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
   min-width: 150px;
   min-height: 60px;
-  
 }
 
 header {
@@ -193,15 +238,15 @@ header {
 }
 
 .product-domain {
-  background-image: url('./assets/Domain.svg');
+  background-image: url("./assets/Domain.svg");
 }
 
 .product-build {
-  background-image: url('./assets/Website Builder.svg');
+  background-image: url("./assets/Website Builder.svg");
 }
 
 .product-grow {
-  background-image: url('./assets/Stats.svg');
+  background-image: url("./assets/Stats.svg");
 }
 
 .featured {
