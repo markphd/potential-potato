@@ -1,12 +1,16 @@
 :root {
   --panel-size: 450px;
   --padding-menu-item: 10px 0;
-  --transition: transform 300ms ease-in-out;
+  --transition: transform 300ms cubic-bezier(0.86,0,0.07,1);
   --ne-body-font-size: 1rem;
   --ne-headings-scale: 1.125;
+  --border-light-grey: #ededed;
+  --button-blue: #0078c8;
   --dark-100: rgba(60, 60, 60, 1); 
   --dark-70: rgba(60, 60, 60, 0.7);
 }
+
+@import "./styles/typography.css";
 
 @media (width >= 48em) {
   :root {
@@ -22,6 +26,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   font-family: Montserrat;
@@ -32,13 +40,31 @@ body {
   height: 100%;
 }
 
+nav {
+  position: fixed;
+  display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: flex-start;
+align-items: center;
+}
+
 main {
   display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
 }
 
 .menu {
-  position: absolute;
+  margin: 3em;
   z-index: 1;
+  height: 16px;
+  width: 32px;
+  border: none;
+  border-top: 1px solid var(--dark-100);
+  border-bottom: 1px solid var(--dark-100);
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .menu-panel {
@@ -120,4 +146,74 @@ main {
 
 .menu-item:not(:last-child) {
   border-bottom: 1px solid var(--dark-100);
+}
+
+.logo {
+  background-image: url('./assets/logo.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  min-width: 150px;
+  min-height: 60px;
+  
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6em 0;
+  text-align: center;
+}
+
+.header-products {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  max-width: 80em;
+  gap: 1rem;
+}
+
+.header-product {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  border: 1px solid var(--border-light-grey);
+  /* background-color: aqua; */
+}
+
+.header-product-image {
+  background-repeat: no-repeat;
+  height: 96px;
+  width: 96px;
+}
+
+.product-domain {
+  background-image: url('assets/Domain.svg');
+}
+
+.product-build {
+  background-image: url('assets/Website builder.svg');
+}
+
+.product-grow {
+  background-image: url('assets/Stats.svg');
+}
+
+.featured {
+  background-color: #edebf3;
+}
+
+.cta {
+  background-color: transparent;
+  border: 1px solid var(--button-blue);
+  color: var(--button-blue);
+  font-size: 14px;
+  padding: 8px 30px;
+  border-radius: 100px;
+  margin-top: 30px;
 }
