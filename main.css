@@ -104,6 +104,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   background-color: white;
+  padding: 1% 0;
 }
 
 main {
@@ -112,7 +113,28 @@ main {
   padding-top: 1rem;
 }
 
-.menu {
+
+.menu-burger {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  margin: 0 2em;
+}
+
+.menu-burger::before, .menu-burger::after {
+  content: '';
+  width: 30px;
+  height: 1px; /* cross thickness */
+  background-color: black;
+}
+
+/* 
+.menu-burger {
   margin: 3em;
   z-index: 1;
   height: 16px;
@@ -122,7 +144,7 @@ main {
   border-bottom: 1px solid var(--dark-100);
   cursor: pointer;
   background-color: transparent;
-}
+} */
 
 .menu-panel {
   width: var(--panel-size);
@@ -342,3 +364,23 @@ header {
   border: none;
   margin-top: 30px;
 }
+
+
+
+
+/* 
+EXPLORE CSS GRID
+.parent {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  }
+  
+  .div1 { grid-area: 1 / 2 / 2 / 5; }
+  .div2 { grid-area: 2 / 2 / 3 / 5; }
+  .div3 { grid-area: 3 / 2 / 4 / 5; }
+  .div4 { grid-area: 4 / 2 / 5 / 5; }
+  .div5 { grid-area: 5 / 2 / 6 / 5; }
+   */
