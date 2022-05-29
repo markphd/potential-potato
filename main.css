@@ -37,6 +37,7 @@ h1 {
 
 h2 {
   font-size: 48px;
+  font-weight: normal;
 }
 
 h3 {
@@ -49,6 +50,7 @@ h4 {
 
 h5 {
   font-size: 20px;
+  font-weight: normal;
 }
 
 h6 {
@@ -278,6 +280,31 @@ header {
 
 .featured {
   background-color: var(--light-purple);
+  display: flex;
+  flex-direction: column;
+  padding: 10em 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1110px;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 540px;
+  max-height: 450px;
+  align-self: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.featured-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .help {
