@@ -15,6 +15,7 @@
   --container-width: 100%;
   --featured-item-direction: column;
   --featured-item-direction-reverse: column;
+  --padding: calc(8px + 1.5625vw);
 }
 
 @media (width >= 48em) {
@@ -84,6 +85,7 @@ caption {
 
 html {
   scroll-behavior: smooth;
+  font-size: calc(16px + 0.390625vw);
 }
 
 body {
@@ -124,6 +126,8 @@ main {
   justify-content: space-around;
   cursor: pointer;
   margin: 0 2em;
+  position: relative;
+  z-index: 2;
 }
 
 .menu-burger::before, .menu-burger::after {
@@ -194,6 +198,7 @@ main {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  z-index: 3;
 }
 
 .menu-close::before, .menu-close::after {
