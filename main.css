@@ -85,7 +85,6 @@ caption {
 
 html {
   scroll-behavior: smooth;
-  font-size: calc(16px + 0.390625vw);
 }
 
 body {
@@ -218,7 +217,7 @@ main {
 }
 
 .menu-item-text {
-  max-width: 18ch;
+  align-content: center;
 }
 
 .menu-text-title {
@@ -232,8 +231,10 @@ main {
 }
 
 .menu-item {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.5fr;
+  grid-template-rows: 6em;
+  grid-gap: 1em;
   align-items: center;
   padding: var(--padding-menu-item);
   position: relative;
@@ -241,11 +242,11 @@ main {
 
 .menu-item::after {
   content: "";
-  right: 0;
-  position: absolute;
   height: 20px;
   width: 20px;
   background: url("./assets/Right Arrow.svg") no-repeat;
+  align-self: center;
+  justify-self: end;
 }
 
 .menu-item-icon {
