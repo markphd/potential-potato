@@ -1,5 +1,5 @@
 :root {
-  --panel-size: 450px;
+  --panel-size: 100%;
   --padding-menu-item: 10px 0;
   --transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
   --body-font-size: 1rem;
@@ -8,6 +8,7 @@
   --button-blue: #0078c8;
   --dark-100: rgba(60, 60, 60, 1);
   --dark-70: rgba(60, 60, 60, 0.7);
+  --menu-transform: translateX(var(--panel-size));
 }
 
 @media (width >= 48em) {
@@ -139,7 +140,7 @@ main {
 }
 
 .menu-panel.hidden {
-  transform: translateX(550px);
+  transform: var(--menu-transform);
   transition: var(--transition);
 }
 
