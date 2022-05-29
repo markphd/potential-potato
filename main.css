@@ -9,10 +9,12 @@
   --dark-100: rgba(60, 60, 60, 1);
   --dark-70: rgba(60, 60, 60, 0.7);
   --menu-transform: translateX(var(--panel-size));
+  --menu-close-size: 100px;
 }
 
 @media (width >= 48em) {
   :root {
+    --menu-close-size: 40px;
     --panel-size: 550px;
     --body-font-size: 0.8rem;
     --headings-scale: 1.2;
@@ -150,8 +152,32 @@ main {
 
 .menu-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2rem;
+  right: 4rem;
+  border: none;
+  background-color: transparent;
+  width: var(--menu-close-size);
+  height: var(--menu-close-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-close::before, .menu-close::after {
+  position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px; /* cross thickness */
+    background-color: black;
+}
+
+.menu-close::before {
+  transform: rotate(45deg);
+}
+
+.menu-close::after {
+  transform: rotate(-45deg);
 }
 
 .menu-item-text {
