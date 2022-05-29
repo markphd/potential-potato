@@ -4,8 +4,10 @@
   --transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
   --body-font-size: 1rem;
   --headings-scale: 1.125;
+  --light-grey: #f7f7f7;
+  --light-purple: #edebf3;
   --border-light-grey: #ededed;
-  --button-blue: #0078c8;
+  --primary-blue: #0078c8;
   --dark-100: rgba(60, 60, 60, 1);
   --dark-70: rgba(60, 60, 60, 0.7);
   --menu-transform: translateX(var(--panel-size));
@@ -275,15 +277,29 @@ header {
 }
 
 .featured {
-  background-color: #edebf3;
+  background-color: var(--light-purple);
+}
+
+.help {
+  background-color: var(--light-grey);
 }
 
 .cta {
   background-color: transparent;
-  border: 1px solid var(--button-blue);
-  color: var(--button-blue);
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
   font-size: 14px;
   padding: 8px 30px;
   border-radius: 100px;
+  margin-top: 30px;
+}
+
+.cta-fill {
+  color: white;
+  background-color: var(--primary-blue);
+  font-size: 14px;
+  padding: 8px 30px;
+  border-radius: 100px;
+  border: none;
   margin-top: 30px;
 }
