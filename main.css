@@ -10,8 +10,6 @@
   --dark-70: rgba(60, 60, 60, 0.7);
 }
 
-@import url("./styles/typography.css");
-
 @media (width >= 48em) {
   :root {
     --panel-size: 550px;
