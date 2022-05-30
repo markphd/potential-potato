@@ -99,7 +99,7 @@ main {
 .menu-burger {
   border: none;
   background-color: transparent;
-  width: 30px;
+  width: 50px;
   height: 30px;
   display: flex;
   flex-direction: column;
@@ -212,6 +212,12 @@ main {
   align-items: center;
   position: relative;
   padding: calc(var(--spacing) / 2);
+  cursor: pointer;
+}
+
+.menu-item:hover::after {
+  transform: scale(1.2) translateX(10px);
+  transition: var(--animation-transition);
 }
 
 .menu-item::after {
@@ -221,6 +227,7 @@ main {
   background: url("./assets/Right Arrow.svg") no-repeat;
   align-self: center;
   justify-self: end;
+  transition: var(--animation-transition);
 }
 
 .menu-item-icon {
