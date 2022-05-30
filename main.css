@@ -53,6 +53,7 @@ h3 {
 h5 {
   font-size: 20px;
   font-weight: normal;
+  margin: 0;
 }
 
 .large {
@@ -155,14 +156,22 @@ main {
 }
 
 .menu-close-container {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: var(--spacing);
 }
 
+.menu-close-title {
+  width: 100%;
+  text-align: center;
+}
+
 .menu-close {
-  position: absolute;
-  top: -2rem;
-  right: 1rem;
+  position: relative;
   border: none;
   background-color: transparent;
   width: var(--menu-close-size);
@@ -203,6 +212,11 @@ main {
 .menu-text-description {
   color: var(--dark-70);
   font-size: var(--ne-body-font-size);
+}
+
+.menu-item-container {
+  display: grid;
+  grid-auto-rows: 1fr
 }
 
 .menu-item {
