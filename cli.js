@@ -1,5 +1,5 @@
 const { result } = require("./data/domain-overview.json");
-const domains = result.domains;
+const { domains } = result;
 
 function getEntriesWithPlan(plan) {
   const SUBSCRIPTION = [
@@ -42,7 +42,6 @@ function getEntriesWithNonZeroBalance() {
 function getConnectedDomains() {
   let parentDomains = domains.filter((domain) => domain.parentDomain === null);
   let childDomains = domains.filter((domain) => domain.parentDomain !== null);
-
   let domainTree = {};
 
   parentDomains.forEach(
@@ -50,7 +49,7 @@ function getConnectedDomains() {
   );
 
   childDomains.forEach((child) =>
-    domainTree[child.parentDomain].connectedDomains.push(child)
+    domainTree[child.parentDomain].connectedDomains.push(child.name)
   );
 
   console.log(JSON.stringify(domainTree, null, 4));
