@@ -46,14 +46,14 @@ function getConnectedDomains() {
   let domainTree = {};
 
   parentDomains.forEach(
-    (parent) => new Object((domainTree[parent.name] = { connectedDomains: [] }))
+    (parent) => (domainTree[parent.name] = { connectedDomains: [] })
   );
 
   childDomains.forEach((child) =>
     domainTree[child.parentDomain].connectedDomains.push(child)
   );
 
-  console.log(domainTree);
+  console.log(JSON.stringify(domainTree, null, 4));
 }
 
 //TEST FUNCTION
